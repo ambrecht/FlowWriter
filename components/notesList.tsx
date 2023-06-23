@@ -16,13 +16,13 @@ const NoteList = () => {
               created_at: string;
               word_count: number;
             }) => (
-              <li key={note.id} className="border-b py-2">
+              <li key={note.id} className="border-b py-2 list-none">
                 <p className="text-lg">{note.content}</p>
                 <p className="text-gray-500 text-sm">
                   Erstellt am: {new Date(note.created_at).toLocaleString()}
                 </p>
                 <p className="text-gray-500 text-sm">
-                  Wortzahl: {note.word_count}
+                  {note.word_count} Wörter
                 </p>
               </li>
             ),
